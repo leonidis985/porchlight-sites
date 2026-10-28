@@ -1,0 +1,102 @@
+@import url("../../css/shared.css");
+
+:root {
+  --hh-brown: #5c3a24;
+  --hh-tan: #c49a6c;
+  --hh-cream: #faf3e8;
+  --hh-rose: #c97b6b;
+}
+
+body { background: var(--hh-cream); color: var(--hh-brown); }
+
+.hh-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid #e8d9c4;
+}
+.hh-brand {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--hh-brown);
+}
+.hh-nav nav { display: flex; gap: 1.1rem; font-size: 0.92rem; }
+.hh-nav a { color: #7a5a40; text-decoration: none; }
+.hh-nav a:hover { color: var(--hh-brown); }
+
+.hh-hero {
+  padding: 3rem 0 2.5rem;
+  text-align: center;
+}
+.hh-hero .tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hh-rose);
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+.hh-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+.hh-hero p {
+  max-width: 36ch;
+  margin: 0 auto 1.5rem;
+  color: #7a5a40;
+  font-size: 1.05rem;
+}
+.hh-hero .btn { background: var(--hh-brown); box-shadow: none; }
+.hh-hero .btn:hover { background: #3f2718; }
+
+.hh-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2.5rem;
+}
+@media (min-width: 700px) { .hh-grid { grid-template-columns: repeat(3, 1fr); } }
+.hh-card {
+  background: #fffdf8;
+  border: 1px solid #e8d9c4;
+  border-radius: 16px;
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+}
+.hh-emoji { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.hh-card h3 { font-family: var(--serif); font-size: 1.15rem; margin-bottom: 0.35rem; }
+.hh-card p { color: #7a5a40; font-size: 0.92rem; }
+
+.hh-info {
+  background: #fffdf8;
+  border: 1px solid #e8d9c4;
+  border-radius: 18px;
+  padding: 1.6rem 1.4rem;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 700px) { .hh-info { grid-template-columns: 1fr 1fr; } }
+.hh-info h2 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+.hh-info p, .hh-info li { color: #7a5a40; }
+.hh-info ul { list-style: none; display: grid; gap: 0.35rem; }
+
+.hh-footer {
+  text-align: center;
+  padding: 2.5rem 0;
+  color: #7a5a40;
+  font-size: 0.9rem;
+}
+.hh-footer strong { color: var(--hh-brown); }
+
+@media (max-width: 560px) {
+  .hh-nav nav { display: none; }
+}
